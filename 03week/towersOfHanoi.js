@@ -21,7 +21,7 @@ function printStacks() {
 
 function movePiece() {
   // Your code here
-
+  endStack.push(startStack.pop());
 }
 
 function isLegal() {

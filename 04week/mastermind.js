@@ -35,8 +35,29 @@ function generateHint() {
 function mastermind(guess) {
   solution = 'abcd'; // Comment this out to generate a random solution
   // your code here
-}
+}if (isvalid(guess)){
+  board.push(guess)
+  if (checkForWin(guess)){
+    //tell the user that they won
+    resetBoard();
+  } else if(hasGuessesRemaining()) {
+//tell user that htey lost and show solution
+   resetBoard();
+    }else{
+      showHints()
 
+
+
+
+      //turn both into array split('')loop through guess array
+      // for each letter check for corresponding letter
+      //if the corre letter is is the sme right letter right place
+      // if letter in solution array its right letter wrong place
+    }
+  }
+  }else{
+  //you tell the user a 4 letter guess, no numbers
+}
 
 function getPrompt() {
   rl.question('guess: ', (guess) => {
@@ -69,6 +90,15 @@ if (typeof describe === 'function') {
     });
 
   });
+
+  const showHints=(guess)=>{
+    const guessArr = guress.split('');
+    const solutionArr = solution.split('');
+    guessArr.forEach(item, index)=> {
+      console.log(item, index)
+    };
+    console.log(guessArr, solutionArr)
+  };
 
 } else {
 
